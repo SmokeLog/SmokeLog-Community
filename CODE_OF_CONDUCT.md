@@ -18,7 +18,7 @@ Examples of unacceptable behavior include:
 
 ## Enforcement
 
-Violations of this code may be reported by contacting the project maintainers at [garlicrot@example.com]. All complaints will be reviewed and investigated promptly and fairly.
+Violations of this code may be reported by contacting the project maintainers at [contact@smokelog.org]. All complaints will be reviewed and investigated promptly and fairly.
 
 ## Attribution
 
