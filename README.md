@@ -35,6 +35,11 @@ SmokeLog is live, and we’re working on quality-of-life improvements, including
 
 Your input here will directly influence these efforts—let’s build SmokeLog together!
 
+## 📜 Change Log
+Stay up to date with the latest changes and improvements to SmokeLog.
+
+📌 **See the full Change Log here** → [CHANGELOG.md](CHANGELOG.md)
+
 ## 📜 License
 This repository and its community content are released under the [MIT License](LICENSE). See the [LICENSE](LICENSE) file for details.
 
