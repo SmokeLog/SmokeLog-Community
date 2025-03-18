@@ -1,6 +1,12 @@
 # SmokeLog Community 💨📢
 
-Welcome to the **SmokeLog Community** repository! This is the central hub for public discussions, issue tracking, and bug reports for **SmokeLog**, the web application designed to help users track their smoking habits and gain personalized insights (live at [www.smokelog.org](https://www.smokelog.org)). Created by [GarlicRot](https://github.com/GarlicRot), this space is open to everyone to collaborate, share ideas, and help shape the future of SmokeLog.
+Welcome to the **SmokeLog Community** repository!
+
+This is the central hub for public discussions, issue tracking, and bug reports for **SmokeLog**, the web application designed to help users track their smoking habits and gain personalized insights.
+
+(live at [www.smokelog.org](https://www.smokelog.org)).
+
+Created by [GarlicRot](https://github.com/GarlicRot), this space is open to everyone to collaborate, share ideas, and help shape the future of SmokeLog.
 
 ## 🌟 Purpose
 - **Discussions**: Share feedback, suggest features, and engage in open conversations via the [Discussions tab](https://github.com/SmokeLog/SmokeLog-Community/discussions).
