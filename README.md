@@ -18,7 +18,7 @@ Created by [GarlicRot](https://github.com/GarlicRot), this space is open to ever
 - **Explore**: Visit [www.smokelog.org](https://www.smokelog.org) to start using SmokeLog.
 - **Participate**: 
   - Use the **Discussions** tab to post ideas or questions (e.g., “What features would you like to see?”).
-  - Use the **Issues** tab to report bugs or suggest fixes (e.g., “Login fails on mobile”).
+  - Use the Issues tab](https://github.com/SmokeLog/SmokeLog-Community/issues) to report bugs or suggest fixes (e.g., “Login fails on mobile”).
 - **Stay Updated**: Watch this repository for announcements about new features and improvements.
 
 ## 📝 Guidelines
