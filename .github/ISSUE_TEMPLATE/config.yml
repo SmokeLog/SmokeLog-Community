@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: SmokeLog Discussions
+    url: https://github.com/SmokeLog/SmokeLog-Community/discussions
+    about: For general discussions, ideas, or community conversations, please use Discussions.
+  - name: SmokeLog Website
+    url: https://www.smokelog.org
+    about: Visit the live SmokeLog app to explore its features.
