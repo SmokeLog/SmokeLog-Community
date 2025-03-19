@@ -13,7 +13,7 @@ All notable changes to SmokeLog will be documented in this file. This project ad
   - Personalized dashboard with stats (e.g., total sessions, most-used strains).
   - Inventory management for active and finished containers.
   - User profiles with username customization.
-- Community engagement tools:
+  - Community engagement tools:
   - Creation of `SmokeLog-Community` repository with Discussions tab for feedback and ideas.
   - Issues tab for bug reports and feature requests.
 
