@@ -85,6 +85,3 @@ All notable changes to SmokeLog will be documented in this file. This project ad
 ### Notes
 - SmokeLog launched publicly on March 17, 2025. Expect ongoing improvements based on community feedback!
 - See the [Discussions](https://github.com/SmokeLog/SmokeLog-Community/discussions) or [Issues](https://github.com/SmokeLog/SmokeLog-Community/issues) tabs to get involved.
-
-[1.1.0]: https://github.com/SmokeLog/SmokeLog-Community/releases/tag/v1.1.0
-[1.0.0]: https://github.com/SmokeLog/SmokeLog-Community/releases/tag/v1.0.0
