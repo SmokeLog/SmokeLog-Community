@@ -59,7 +59,7 @@ All notable changes to SmokeLog will be documented in this file. This project ad
 ### Notes
 - Version 1.1.0 focuses on quality-of-life improvements based on user feedback, enhancing usability, accessibility, and visual consistency.
 - The Contact page currently stores submissions in Firestore; email notifications for the SmokeLog team are planned for a future update.
-- See the [Discussions](https://github.com/SmokeLog/SmokeLog-Community/discussions) or [Issues](https://github.com/SmokeLog/SmokeLog-Community/issues) tabs to get involved.
+- See the [v1.1.0 Discussion](https://github.com/SmokeLog/SmokeLog-Community/discussions/2) or [Issues](https://github.com/SmokeLog/SmokeLog-Community/issues) tabs to get involved.
 
 ## [1.0.0] - 2025-03-17
 
