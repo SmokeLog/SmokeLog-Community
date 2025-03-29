@@ -2,6 +2,70 @@
 
 All notable changes to SmokeLog will be documented in this file. This project adheres to [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and uses [Semantic Versioning](https://semver.org/).
 
+## [1.2.0] - 2025-03-28
+
+### Added
+- **Footer Component with Styles and Mobile Optimizations:**
+  - Created `Footer.tsx` component with branding, links, and credits sections.
+  - Added footer styles in `global.css` with an edge-snapping layout for desktop.
+  - Optimized footer for mobile with reduced height and better spacing.
+  - Integrated the `Footer` component in `_app.tsx` to display on all pages.
+  - Set the footer tagline to "Smoke Easy, Log Easier."
+  - Files: `src/components/Footer.tsx`, `src/styles/global.css`, `src/pages/_app.tsx`.
+  - Issue: [#9](https://github.com/SmokeLog/SmokeLog/issues/9)
+  - Commit: `feat: add footer component with styles and mobile optimizations`
+
+- **Collapsible Sections in Inventory Page:**
+  - Added toggle functionality for "Active Inventory" and "Finished Containers" sections in `Inventory.tsx`.
+  - Introduced `isActiveCollapsed` and `isFinishedCollapsed` state variables to manage collapse state.
+  - Updated UI with collapsible headers and icons (▼/▲) to indicate section state.
+  - Added CSS for smooth collapse/expand animation using `max-height` and `opacity`.
+  - Improved space efficiency for a better mobile experience.
+  - Files: `src/pages/Inventory.tsx`, `src/styles/global.css` (or a separate stylesheet).
+  - Issue: [#10](https://github.com/SmokeLog/SmokeLog/issues/10)
+  - Commit: `feat: add collapsible sections to inventory page`
+
+### Changed
+- **Improved Mobile Layout for Weekly Session Chart:**
+  - Adjusted `dashboard.tsx` to restructure chart header elements for better mobile presentation.
+  - Updated `globals.css` with responsive styling for mobile view:
+    - Centered the date range display in the mobile layout.
+    - Reorganized navigation buttons into a single row to save space.
+    - Improved touch targets and spacing for controls.
+    - Added flex ordering for proper element flow on mobile.
+  - Files: `src/pages/dashboard.tsx`, `src/styles/global.css`.
+  - Issue: [#8](https://github.com/SmokeLog/SmokeLog/issues/8)
+  - Commit: `feat: Improve mobile layout for weekly session chart`
+
+- **Enhanced Session Page with Timer Improvements, Submission Handling, and Dynamic Positioning:**
+  - Made timer size consistent with form content by setting `min-width` of `.session-form` and `.timer-container` to `300px`, and increased `.timer-circle` size to `150px`.
+  - Added a better timer completion indicator with a `timerFinished` state, green background, pulse animation, and checkmark icon.
+  - Prevented multiple clicks on the "Save Session" button using an `isSubmitting` state, showing a "Saving..." message and styling the disabled state with a grey background.
+  - Made content position dynamic below the navbar using `showTimer` and `sessionLogged` states, with a `top-aligned` class and smooth transition.
+  - Files: `src/pages/session.tsx`, `src/styles/global.css`.
+  - Issue: [#7](https://github.com/SmokeLog/SmokeLog/issues/7)
+  - Commit: `feat: enhance session page with timer improvements, submission handling, and dynamic positioning`
+
+### Fixed
+- **Graph Data and Current Week Button Styling in Dashboard:**
+  - Fixed graph data in `dashboard.tsx` by correcting timezone handling in `fetchSessions`:
+    - Removed incorrect UTC normalization, using local day of the week (`getDay`).
+    - Ensured graph updates on week navigation with `selectedWeekStart` dependency.
+    - Adjusted y-axis scaling to dynamically set the max value.
+    - Added logging for invalid session dates.
+  - Updated the "Current Week" button in `dashboard.tsx` and `globals.css`:
+    - Set button to blue (`#1e90ff`) on the current week, grey (`#555`) on past weeks.
+    - Added hover effect: grey to blue (`#1e90ff`), blue to darker blue (`#0077e6`).
+    - Ensured the button remains clickable and jumps to the current week in all states.
+  - Files: `src/pages/dashboard.tsx`, `src/styles/global.css`.
+  - Issue: [#6](https://github.com/SmokeLog/SmokeLog/issues/6)
+  - Commit: `feat: fix graph data and update Current Week button styling`
+
+### Notes
+- Version 1.2.0 introduces several UI enhancements and fixes, focusing on improving mobile usability, visual feedback, and space efficiency across the dashboard, session, and inventory pages.
+- The footer addition provides consistent branding and navigation across all pages, with a tagline that may be made configurable in the future.
+- See the [v1.2.0 Discussion](https://github.com/SmokeLog/SmokeLog-Community/discussions) or [Issues](https://github.com/SmokeLog/SmokeLog-Community/issues) tabs to get involved.
+
 ## [1.1.0] - 2025-03-21
 
 ### Added
