@@ -2,7 +2,7 @@
 
 All notable changes to SmokeLog will be documented in this file. This project adheres to [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and uses [Semantic Versioning](https://semver.org/).
 
-## [1.2.0] - 2025-03-28
+## [1.1.1] - 2025-03-28
 
 ### Added
 - **Footer Component with Styles and Mobile Optimizations:**
@@ -62,9 +62,10 @@ All notable changes to SmokeLog will be documented in this file. This project ad
   - Commit: `feat: fix graph data and update Current Week button styling`
 
 ### Notes
-- Version 1.2.0 introduces several UI enhancements and fixes, focusing on improving mobile usability, visual feedback, and space efficiency across the dashboard, session, and inventory pages.
+- Version 1.1.1 introduces several UI enhancements and fixes, focusing on improving mobile usability, visual feedback, and space efficiency across the dashboard, session, and inventory pages.
 - The footer addition provides consistent branding and navigation across all pages, with a tagline that may be made configurable in the future.
-- See the [v1.2.0 Discussion](https://github.com/SmokeLog/SmokeLog-Community/discussions) or [Issues](https://github.com/SmokeLog/SmokeLog-Community/issues) tabs to get involved.
+- **SemVer Note:** Some changes (e.g., issues #7, #8, #9, #10) include new features, which typically warrant a minor version bump (e.g., `v1.2.0`). These have been included in this patch release (`v1.1.1`) to align with the `v1.1.0` milestone.
+- See the [v1.1.1 Discussion](https://github.com/SmokeLog/SmokeLog-Community/discussions) or [Issues](https://github.com/SmokeLog/SmokeLog-Community/issues) tabs to get involved.
 
 ## [1.1.0] - 2025-03-21
 
@@ -76,6 +77,7 @@ All notable changes to SmokeLog will be documented in this file. This project ad
   - Added a "Contact" link in the Navbar, visible in both logged-in and logged-out states.
   - Updated Firestore security rules to allow writes to `contactMessages` for all users, with read access restricted to admins.
   - Files: `src/pages/contact.tsx`, `src/components/Navbar.tsx`, Firestore security rules.
+  - Issue: [#5](https://github.com/SmokeLog/SmokeLog/issues/5)
   - Commit: `feat: implement Contact page for user feedback`
 
 ### Changed
@@ -86,7 +88,8 @@ All notable changes to SmokeLog will be documented in this file. This project ad
   - Improved accessibility with ARIA attributes (`aria-label`, `aria-controls`, `aria-expanded`).
   - Implemented auto-close on menu item clicks for better UX.
   - Files: `src/components/Navbar.tsx`.
-  - Commit: `Fix mobile menu not opening on burger click` (Note: Commit message was narrow; work included broader enhancements.)
+  - Issue: [#1](https://github.com/SmokeLog/SmokeLog/issues/1)
+  - Commit: `feat: enhance Navbar with mobile improvements`
 
 - **Dashboard Welcome Section UI:**
   - Enhanced the personal dashboard's welcome section for better readability, interactivity, and visual appeal.
@@ -97,7 +100,8 @@ All notable changes to SmokeLog will be documented in this file. This project ad
   - Increased font sizes for welcome message and username to enhance hierarchy.
   - Added smooth CSS transitions for interactive elements (e.g., hover underline).
   - Files: `src/pages/dashboard.tsx`, possibly `src/styles/global.css`.
-  - Commit: `Improve dashboard welcome section UI`
+  - Issue: [#3](https://github.com/SmokeLog/SmokeLog/issues/3)
+  - Commit: `feat: improve Dashboard Welcome Section UI`
 
 - **Session Page Enhancements:**
   - Refactored the timer logic in `session.tsx` to resolve `react-hooks/exhaustive-deps` ESLint warning using `useRef` and `useCallback`, removing `timeLeft` from the `useEffect` dependency array.
@@ -106,19 +110,22 @@ All notable changes to SmokeLog will be documented in this file. This project ad
   - Reintroduced `.timer-circle.finished` styles for visual feedback on timer completion (green background, pulse animation).
   - Added `.success-message` styles for the session logged notification.
   - Files: `src/pages/session.tsx`, `globals.css`.
-  - Commit: (Not specified, but likely related to timer refactoring and UI updates)
+  - Issue: [#4](https://github.com/SmokeLog/SmokeLog/issues/4)
+  - Commit: `feat: enhance Session Page with timer refactoring and updated styles`
 
 ### Fixed
 - **Navbar Mobile Menu Issue:**
   - Fixed mobile menu not opening by adding `burgerRef` to exclude burger clicks from the outside click handler.
   - Files: `src/components/Navbar.tsx`.
-  - Commit: `Fix mobile menu not opening on burger click`
+  - Issue: [#1](https://github.com/SmokeLog/SmokeLog/issues/1)
+  - Commit: `fix: mobile menu not opening on burger click`
 
 - **Content Overlap and Background Gap Under Navbar:**
   - Added `padding-top: 65px` to `.home-container` and `.leaderboard-container` to prevent content overlap with the fixed Navbar.
   - Extended the `#121212` background with `min-height: 100vh` to cover the gap under the Navbar.
   - Files: `src/pages/index.tsx`, `src/pages/leaderboards.tsx`.
-  - Commit: `Enhance Navbar mobile menu and fix opening issue`
+  - Issue: [#2](https://github.com/SmokeLog/SmokeLog/issues/2)
+  - Commit: `feat: adjust content and extend background under Navbar`
 
 ### Notes
 - Version 1.1.0 focuses on quality-of-life improvements based on user feedback, enhancing usability, accessibility, and visual consistency.
