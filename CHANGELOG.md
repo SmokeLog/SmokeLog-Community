@@ -2,6 +2,41 @@
 
 All notable changes to SmokeLog will be documented in this file. This project adheres to [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and uses [Semantic Versioning](https://semver.org/).
 
+## [1.1.2] - 2025-03-29
+
+### Added
+- **Instructional Message for Username Setting with Mobile Support:**
+  - Added `isMobile` state in `dashboard.tsx` to detect hover capability using `window.matchMedia("(hover: none)")`, ensuring the message appears automatically on mobile devices when username is null.
+  - Introduced `showMessage` computed value to control visibility of an instructional message ("Tap to set your username" on mobile, "Click to set your username" on desktop, or "Username is locked. Unlock to set your username" if locked), placed within a `username-text-wrapper` div.
+  - Fixed TypeScript error (TS7006) by typing `event` as `MediaQueryListEvent` in the media query change handler, enhancing type safety.
+  - Updated `globals.css` to include `.username-text-wrapper` with `position: relative` and `.instruction-message` styles for a dropdown effect (dark theme #1a1a1a, white text, smooth transition), improving user guidance.
+  - Corrected minor CSS typos (e.g., `background clip` to `-webkit-background-clip`, `stat-card hover` to `stat-card :hover`) for consistency and compatibility.
+  - Files: `src/pages/dashboard.tsx`, `src/styles/global.css`.
+  - Issue: [#11](https://github.com/SmokeLog/SmokeLog/issues/11)
+  - Commit: `feat(dashboard): add instructional message for username setting with mobile support`
+
+### Changed
+- **Improved SEO, Accessibility, and Next.js Conventions Across Project:**
+  - Updated index, inventory, leaderboards, login, session, and signup pages with `<Head>` tags for meta tags and SEO, semantic HTML elements (`<main>`, `<section>`), ARIA attributes, visually hidden labels, and modern `Link` usage (no `legacyBehavior`).
+  - Refined global styles in `globals.css` by adding `prefers-reduced-motion` support, introducing a `.visually-hidden` utility class, and enhancing focus states for better keyboard navigation.
+  - Ensured consistent design, hover effects, and responsiveness across all updated pages.
+  - Files: `src/pages/index.tsx`, `src/pages/inventory.tsx`, `src/pages/leaderboards.tsx`, `src/pages/login.tsx`, `src/pages/session.tsx`, `src/pages/signup.tsx`, `src/styles/global.css`.
+  - Issue: [#12](https://github.com/SmokeLog/SmokeLog/issues/12)
+  - Commit: `feat: Improve SEO, accessibility, and Next.js conventions across project`
+
+- **Proper Page Titles for Improved SEO and UX:**
+  - Removed default `<title>` in `_app.tsx` to allow page-specific titles.
+  - Updated `dashboard.tsx` to use `<Head>` for title, added loading state for auth, and client-side title fallback.
+  - Ensured `contact.tsx` and `login.tsx` use `<Head>` for proper title rendering.
+  - Confirmed `inventory.tsx` already has correct title handling with `<Head>`.
+  - Files: `src/pages/_app.tsx`, `src/pages/contact.tsx`, `src/pages/dashboard.tsx`, `src/pages/inventory.tsx`, `src/pages/login.tsx`.
+  - Issue: [#13](https://github.com/SmokeLog/SmokeLog/issues/13)
+  - Commit: `feat: add proper page titles to _app.tsx, contact.tsx, dashboard.tsx, inventory.tsx, and login.tsx`
+
+### Notes
+- Version 1.1.2 is a patch release that enhances user guidance with an instructional message for username setting, improves SEO, accessibility, and Next.js conventions, and adds proper page titles for better SEO and user experience.
+- See the [v1.1.0 Discussion](https://github.com/SmokeLog/SmokeLog-Community/discussions) or [Issues](https://github.com/SmokeLog/SmokeLog-Community/issues) tabs to get involved.
+
 ## [1.1.1] - 2025-03-28
 
 ### Added
