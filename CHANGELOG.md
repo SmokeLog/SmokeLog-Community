@@ -65,7 +65,7 @@ All notable changes to SmokeLog will be documented in this file. This project ad
 - Version 1.1.1 introduces several UI enhancements and fixes, focusing on improving mobile usability, visual feedback, and space efficiency across the dashboard, session, and inventory pages.
 - The footer addition provides consistent branding and navigation across all pages, with a tagline that may be made configurable in the future.
 - **SemVer Note:** Some changes (e.g., issues #7, #8, #9, #10) include new features, which typically warrant a minor version bump (e.g., `v1.2.0`). These have been included in this patch release (`v1.1.1`) to align with the `v1.1.0` milestone.
-- See the [v1.1.1 Discussion](https://github.com/SmokeLog/SmokeLog-Community/discussions) or [Issues](https://github.com/SmokeLog/SmokeLog-Community/issues) tabs to get involved.
+- See the [v1.1.0 Discussion](https://github.com/SmokeLog/SmokeLog-Community/discussions) or [Issues](https://github.com/SmokeLog/SmokeLog-Community/issues) tabs to get involved.
 
 ## [1.1.0] - 2025-03-21
 
