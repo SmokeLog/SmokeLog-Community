@@ -2,6 +2,33 @@
 
 All notable changes to SmokeLog will be documented in this file. This project adheres to [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and uses [Semantic Versioning](https://semver.org/).
 
+## [1.1.3] - 2025-04-01
+
+### Changed
+- **Enhanced Session Page Reset Behavior:**
+  - Added `resetForm` function in `session.tsx` to reset dropdown (`selectedItem`), checkbox (`markFinished`), and timer states (`timerMinutes`, `timerSeconds`, `timeLeft`, `isTimerRunning`, `timerFinished`).
+  - Updated `handleSubmit` to reset the form immediately when the timer is not enabled.
+  - Implemented reliable timer completion logic:
+    - Replaced initial `waitForTimer` promise (unreliable polling) with a `useEffect` hook watching `timerFinished`.
+    - Delayed reset by 3 seconds after timer completion to show the checkmark, then triggered `resetForm`.
+  - Enhanced `resetForm` to disable the timer (`setShowTimer(false)`), resetting the checkbox and hiding the timer section.
+  - Ensured dropdown resets to "-- Select --", "Mark container as finished" unchecks, and timer disables post-submission.
+  - Files: `src/pages/session.tsx`.
+  - Issue: [#14](https://github.com/SmokeLog/SmokeLog/issues/14)
+  - Commit: `feat(session): enhance session page reset behavior for timer and non-timer submissions`
+
+### Fixed
+- **Session Page Timer Reset Issues:**
+  - Resolved issue where the dropdown didn’t reset and the timer wasn’t disabled after completion by moving reset logic to a `useEffect` hook, ensuring reliable state updates.
+  - Files: `src/pages/session.tsx`.
+  - Issue: [#14](https://github.com/SmokeLog/SmokeLog/issues/14)
+  - Commit: `feat(session): enhance session page reset behavior for timer and non-timer submissions`
+
+### Notes
+- Version 1.1.3 is a patch release that improves the `Session` page’s reset behavior, fixing issues with timer completion and enhancing user experience with consistent form resets.
+- No UI or CSS changes were required; updates focused on logic reliability.
+- See the [v1.1.0 Discussion](https://github.com/SmokeLog/SmokeLog-Community/discussions) or [Issues](https://github.com/SmokeLog/SmokeLog-Community/issues) tabs to get involved.
+
 ## [1.1.2] - 2025-03-29
 
 ### Added
