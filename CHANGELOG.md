@@ -2,6 +2,56 @@
 
 All notable changes to SmokeLog will be documented in this file. This project adheres to [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and uses [Semantic Versioning](https://semver.org/).
 
+## [1.1.4] - 2025-04-03
+
+### Added
+- **Timer Persistence in Session Page:**
+  - Added persistence for timer settings in `session.tsx` using `localStorage` to remember the last set timer values (`timerMinutes` and `timerSeconds`) across page loads.
+  - Files: `src/pages/session.tsx`.
+  - Issue: [#16](https://github.com/SmokeLog/SmokeLog/issues/16)
+  - Commit: `feat: enhance UI with swirl loaders and timer persistence`
+
+- **Swirl Loader Styling Across Dashboard and Leaderboards:**
+  - Integrated swirl loader styling in `dashboard.tsx` for improved visual feedback during data loading, matching the design in `leaderboards.tsx`.
+  - Applied swirl loader styling in `leaderboards.tsx` for a consistent loading experience (no functional changes).
+  - Updated `globals.css` with swirl loader CSS to support consistent loading animations across `dashboard.tsx` and `leaderboards.tsx`.
+  - Files: `src/pages/dashboard.tsx`, `src/pages/leaderboards.tsx`, `src/styles/globals.css`.
+  - Issue: [#16](https://github.com/SmokeLog/SmokeLog/issues/16)
+  - Commit: `feat: enhance UI with swirl loaders and timer persistence`
+
+- **Overhauled Contact Page:**
+  - Created a fully functional `contact.tsx` page with name, email, message fields, and checkboxes for feedback/suggestions and errors/bugs, integrated with Firebase for message storage.
+  - Implemented conditional fields: feedback section with "What did you enjoy about SmokeLog?" and "How can we enhance your experience?" textareas, and bug section with steps, expected behavior, and environment fields.
+  - Added mobile optimization: stacked checkboxes vertically, reduced padding/margins (e.g., `.contact-wrapper` from 30px to 15px), and adjusted font sizes and textarea dimensions.
+  - Enhanced styling: added blue-filled custom checkboxes, aligned success message with Dashboard’s `#1a1a1a` dark theme and fade-in animation, and used green/red themes for success/error states.
+  - Improved Firebase integration: nested feedback and bug data in sub-objects, cleared irrelevant fields on checkbox toggle, and optimized data assignment.
+  - Files: `src/pages/contact.tsx`, `src/types/contact.ts`, `src/styles/contact.css`.
+  - Issue: [#15](https://github.com/SmokeLog/SmokeLog/issues/15)
+  - Commit: `feat(contact): overhaul contact page with mobile optimization, feedback redesign, Firebase integration, and TypeScript fixes`
+
+### Changed
+- **UI Enhancements for Better User Experience:**
+  - Standardized loading animations with swirl loaders across `dashboard.tsx` and `leaderboards.tsx` for a cohesive UI.
+  - Improved usability in `session.tsx` by persisting timer settings, reducing repetitive user input.
+  - Enhanced `contact.tsx` with a modernized feedback system and mobile-friendly design.
+  - Files: `src/pages/session.tsx`, `src/pages/dashboard.tsx`, `src/pages/leaderboards.tsx`, `src/pages/contact.tsx`, `src/styles/globals.css`, `src/styles/contact.css`.
+  - Issues: [#15](https://github.com/SmokeLog/SmokeLog/issues/15), [#16](https://github.com/SmokeLog/SmokeLog/issues/16)
+  - Commits: `feat: enhance UI with swirl loaders and timer persistence`, `feat(contact): overhaul contact page with mobile optimization, feedback redesign, Firebase integration, and TypeScript fixes`
+
+### Fixed
+- **TypeScript and ESLint Issues in Contact Page:**
+  - Added `ContactMessage` interface in `src/types/contact.ts` to define optional feedback and bug properties, resolving TS2339 errors in `contact.tsx`.
+  - Updated `let` to `const` for `dataToSave` in `contact.tsx` to address ESLint `prefer-const` warnings.
+  - Files: `src/pages/contact.tsx`, `src/types/contact.ts`.
+  - Issue: [#15](https://github.com/SmokeLog/SmokeLog/issues/15)
+  - Commit: `feat(contact): overhaul contact page with mobile optimization, feedback redesign, Firebase integration, and TypeScript fixes`
+
+### Notes
+- Version 1.1.4 is a patch release that enhances the UI with timer persistence, standardized swirl loaders, and an overhauled Contact page, improving usability, consistency, and feedback collection.
+- The swirl loader CSS in `globals.css` is designed to be reusable for future loading states.
+- No new dependencies were introduced; all updates leverage existing browser APIs and styling tools.
+- See the [v1.1.0 Discussion](https://github.com/SmokeLog/SmokeLog-Community/discussions) or [Issues](https://github.com/SmokeLog/SmokeLog-Community/issues) tabs to get involved.
+
 ## [1.1.3] - 2025-04-01
 
 ### Changed
