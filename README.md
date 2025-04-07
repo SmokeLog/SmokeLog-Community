@@ -2,7 +2,7 @@
 
 Welcome to the **SmokeLog Community** repository!
 
-This is the central hub for public discussions, issue tracking, and bug reports for **SmokeLog**, the web application designed to help users track their smoking habits and gain personalized insights.
+This is the central hub for public discussions, issue tracking, and bug reports for **SmokeLog**, the web application designed to help users track their smoking habits—across **Concentrates, Flower, and Carts**—and gain personalized insights.
 
 (live at [www.smokelog.org](https://www.smokelog.org)).
 
@@ -12,8 +12,10 @@ Created by [GarlicRot](https://github.com/GarlicRot), this space is open to ever
 - **Discussions**: Share feedback, suggest features, and engage in open conversations via the [Discussions tab](https://github.com/SmokeLog/SmokeLog-Community/discussions).
 - **Issue Tracking**: Report bugs, request enhancements, or ask questions via the [Issues tab](https://github.com/SmokeLog/SmokeLog-Community/issues).
 - **Community Building**: Connect with other SmokeLog users and contribute to a growing ecosystem.
+- **Product Expansion**: SmokeLog now supports logging and tracking **Flower** and **Cart** sessions with full-featured stats and breakdowns.
 
 ## 🚀 Getting Started
+
 ### For Users
 - **Explore**: Visit [www.smokelog.org](https://www.smokelog.org) to start using SmokeLog.
 - **Participate**: 
@@ -28,8 +30,9 @@ Created by [GarlicRot](https://github.com/GarlicRot), this space is open to ever
 - **Provide Details**: Include steps to reproduce bugs or context for suggestions.
 
 ## 🚧 Current Focus
-SmokeLog is live, and we’re working on quality-of-life improvements, including:
-- Enhancing dashboard performance and visualizations.
+SmokeLog is live and evolving! Here’s what we’re currently focused on:
+- Expanding category-specific insights and achievements.
+- Improving dashboard performance and visualizations.
 - Integrating a Discord bot for real-time updates.
 - Improving authentication and optimizing Firestore queries.
 
@@ -38,7 +41,8 @@ Your input here will directly influence these efforts—let’s build SmokeLog t
 ## 📜 Change Log
 Stay up to date with the latest changes and improvements to SmokeLog.
 
-📌 **See the full Change Log here** → [CHANGELOG.md](CHANGELOG.md)
+📌 **See the full Change Log here** → [CHANGELOG.md](CHANGELOG.md)  
+Major update in `v2.0.0`: Support for Flower and Cart logging and tracking.
 
 ## 📜 License
 This repository and its community content are released under the [MIT License](LICENSE). See the [LICENSE](LICENSE) file for details.
