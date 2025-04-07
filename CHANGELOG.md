@@ -2,6 +2,30 @@
 
 All notable changes to SmokeLog will be documented in this file. This project adheres to [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and uses [Semantic Versioning](https://semver.org/).
 
+## [2.0.0] - 2025-04-06
+
+### Added
+- **Full Support for Flower and Cart Categories:**
+  - Introduced category support across the entire app: Concentrates, Flower, and Carts.
+  - Updated `Inventory` page to include a category selector and collapsible subsections for each product type.
+  - Implemented product-specific session logging with a new category selection UI and conditional form behavior.
+  - Refactored `Dashboard` stats and `Leaderboards` to display detailed breakdowns per category.
+  - Restructured `Footer` into a three-column layout for improved design and responsiveness.
+  - Files: `src/pages/inventory.tsx`, `src/pages/session.tsx`, `src/pages/dashboard.tsx`, `src/pages/leaderboards.tsx`, `src/components/Footer.tsx`, `src/styles/globals.css`, `src/types/InventoryItem.ts`, `src/types/SessionData.ts`.
+  - Commit: `feat: expand support for Flower & Cart products with improved UX, stats, and categorization`
+
+### Changed
+- **Expanded Product Scope Beyond Concentrates:**
+  - Shifted the data structure and UI across inventory, session logging, and stats to fully support multiple product types.
+  - Reworked styling and layout across key pages to improve usability, clarity, and mobile responsiveness.
+  - Files: Multiple
+
+### Notes
+- Version 2.0.0, codenamed **"Beyond Concentrates"**, marks a major expansion of SmokeLog to support Flower and Cart users alongside Concentrates.
+- These changes greatly improve inclusivity, enabling users to log and analyze all major product types with clean, category-specific stats and UX improvements.
+- This update also sets the stage for future achievements, deeper insights, and personalized dashboards based on product preferences.
+- See the [Discussion for v2.0.0](https://github.com/SmokeLog/SmokeLog-Community/discussions/3) or join the conversation in the [SmokeLog-Community Issues](https://github.com/SmokeLog/SmokeLog-Community/issues).
+
 ## [1.1.4] - 2025-04-03
 
 ### Added
