@@ -2,6 +2,29 @@
 
 All notable changes to SmokeLog will be documented in this file. This project adheres to [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and uses [Semantic Versioning](https://semver.org/).
 
+## [2.1.0] - 2025-04-07
+
+### Added
+- **Edit Functionality for Inventory Items:**
+  - Introduced full editing capabilities on the `Inventory` page, allowing users to modify strain name, type, amount, texture, price, discount, and `finished` state.
+  - Added a responsive pencil icon button that appears on hover (desktop) or tap (mobile) to initiate editing.
+  - Populated the form with existing item values when editing and enabled seamless transitions between "Add" and "Edit" modes.
+  - Included a "Cancel" button to exit edit mode and reset the form state.
+  - Files: `src/pages/inventory.tsx`, `src/styles/globals.css`.
+  - Issue: [#18](https://github.com/SmokeLog/SmokeLog/issues/18)
+  - Commit: `feat(inventory): add item editing functionality and UI enhancements`
+
+### Changed
+- **Inventory Page UI/UX Improvements:**
+  - Refactored form logic to handle both add and edit workflows with shared state.
+  - Enhanced layout and accessibility by updating ARIA labels, visually hidden headings, and form inputs.
+  - Introduced new styles for the edit icon, finished checkbox, and cancel button in `globals.css`.
+  - Applied smoother transitions, fade-ins, and mobile responsiveness for better user experience.
+
+### Notes
+- Version 2.1.0 expands on the major enhancements introduced in 2.0.0 by allowing users to fully manage and update their inventory data.
+- This update provides a much more flexible inventory system and sets the foundation for features like item duplication, archiving, or history tracking.
+
 ## [2.0.0] - 2025-04-05
 
 ### Added
