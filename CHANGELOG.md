@@ -35,6 +35,7 @@ All notable changes to SmokeLog will be documented in this file. This project ad
   - Refactored `Dashboard` stats and `Leaderboards` to display detailed breakdowns per category.
   - Restructured `Footer` into a three-column layout for improved design and responsiveness.
   - Files: `src/pages/inventory.tsx`, `src/pages/session.tsx`, `src/pages/dashboard.tsx`, `src/pages/leaderboards.tsx`, `src/components/Footer.tsx`, `src/styles/globals.css`, `src/types/InventoryItem.ts`, `src/types/SessionData.ts`.
+  - Issue: [#17](https://github.com/SmokeLog/SmokeLog/issues/17)
   - Commit: `feat: expand support for Flower & Cart products with improved UX, stats, and categorization`
 
 ### Changed
