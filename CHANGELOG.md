@@ -2,7 +2,7 @@
 
 All notable changes to SmokeLog will be documented in this file. This project adheres to [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and uses [Semantic Versioning](https://semver.org/).
 
-## [2.0.0] - 2025-04-06
+## [2.0.0] - 2025-04-05
 
 ### Added
 - **Full Support for Flower and Cart Categories:**
