@@ -2,6 +2,45 @@
 
 All notable changes to SmokeLog will be documented in this file. This project adheres to [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and uses [Semantic Versioning](https://semver.org/).
 
+## [2.3.0] - 2025-04-08
+
+### Added
+- **Collapsible Leaderboard Sections with Persistent State:**
+  - Added collapsible headers for Concentrate, Flower, and Cart stats sections on the `Leaderboards` page.
+  - Persisted collapse state using `localStorage` to remember user preferences across sessions.
+  - Refactored the top leaderboard header into a static, non-collapsible section.
+  - Updated CSS with `.collapsible-header` and related styles for consistent transitions and icon behavior.
+  - Files: `src/pages/leaderboards.tsx`, `src/styles/globals.css`.
+  - Issue: [#19](https://github.com/SmokeLog/SmokeLog/issues/19)
+  - Commit: `feat: add collapsible stats sections with persistent state on Leaderboards page`
+
+- **Preserve Timer UI Until Completion in Session Page:**
+  - Fixed an issue where the session form prematurely reset the category and timer UI before the timer completed.
+  - Separated `resetFormFields` from `resetForm` to ensure proper sequencing and visual consistency.
+  - Timer now runs to completion before resetting the form and UI back to the default state.
+  - Files: `src/pages/session.tsx`.
+  - Issue: [#20](https://github.com/SmokeLog/SmokeLog/issues/20)
+  - Commit: `fix: Preserve timer UI on submit until completion in Session page`
+
+- **Favicon Support for Site Branding:**
+  - Introduced a favicon to enhance SmokeLog’s visual identity in browser tabs and bookmarks.
+  - Files: `public/favicon.ico`, `_document.tsx` or `app/layout.tsx` (Next.js).
+  - Issue: [#21](https://github.com/SmokeLog/SmokeLog/issues/21)
+  - Commit: `feat: Add favicon to enhance site branding`
+
+- **Standardized Collapsible Section Styles Across Pages:**
+  - Unified `.collapsible-header` styling across `Dashboard`, `Inventory`, and `Leaderboards`.
+  - Replaced static `▼` symbols with `FaChevronDown` and `FaChevronUp` icons.
+  - Improved accessibility with consistent hover and focus states, and transitioned away from outdated collapse styles.
+  - Files: `src/pages/dashboard.tsx`, `src/pages/inventory.tsx`, `src/pages/leaderboards.tsx`, `src/styles/globals.css`.
+  - Issue: [#22](https://github.com/SmokeLog/SmokeLog/issues/22)
+  - Commit: `feat: Standardize collapsible sections across Dashboard, Inventory, and Leaderboards`
+
+### Notes
+- Version 2.3.0 introduces cohesive UI polish across the app’s collapsible sections, ensuring a consistent and accessible user experience.
+- Fixing the session page logic improves clarity when using timers, especially for "Concentrate" users.
+- The favicon helps improve SmokeLog’s visibility and identity across open browser tabs.
+
 ## [2.2.0] - 2025-04-08
 
 ### Added
