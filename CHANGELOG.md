@@ -5,15 +5,6 @@ All notable changes to SmokeLog will be documented in this file. This project ad
 ## [2.3.0] - 2025-04-08
 
 ### Added
-- **Collapsible Leaderboard Sections with Persistent State:**
-  - Added collapsible headers for Concentrate, Flower, and Cart stats sections on the `Leaderboards` page.
-  - Persisted collapse state using `localStorage` to remember user preferences across sessions.
-  - Refactored the top leaderboard header into a static, non-collapsible section.
-  - Updated CSS with `.collapsible-header` and related styles for consistent transitions and icon behavior.
-  - Files: `src/pages/leaderboards.tsx`, `src/styles/globals.css`.
-  - Issue: [#19](https://github.com/SmokeLog/SmokeLog/issues/19)
-  - Commit: `feat: add collapsible stats sections with persistent state on Leaderboards page`
-
 - **Preserve Timer UI Until Completion in Session Page:**
   - Fixed an issue where the session form prematurely reset the category and timer UI before the timer completed.
   - Separated `resetFormFields` from `resetForm` to ensure proper sequencing and visual consistency.
