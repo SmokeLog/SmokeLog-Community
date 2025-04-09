@@ -2,6 +2,26 @@
 
 All notable changes to SmokeLog will be documented in this file. This project adheres to [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and uses [Semantic Versioning](https://semver.org/).
 
+## [2.2.0] - 2025-04-08
+
+### Added
+- **Collapsible Stats Sections on Leaderboards Page:**
+  - Introduced collapsible headers for Concentrate, Flower, and Cart stats sections.
+  - Persisted collapsed/expanded state for each section using `localStorage`, maintaining user preferences across sessions.
+  - Kept the top 1–5 leaderboard section static and always visible for immediate visibility of top performers.
+  - Files: `src/pages/leaderboards.tsx`, `src/styles/globals.css`
+  - Issue: [#19](https://github.com/SmokeLog/SmokeLog/issues/19)
+  - Commit: `feat: add collapsible stats sections with persistent state on Leaderboards page`
+
+### Changed
+- **Leaderboard UI Enhancements:**
+  - Updated layout and styling to support collapse icons, transitions, and improved responsiveness across devices.
+  - Enhanced visual clarity by reducing cognitive load and allowing users to focus on desired sections.
+
+### Notes
+- Version 2.2.0 builds on the category-specific leaderboard improvements from v2.0.0 by adding collapsible UI functionality and persistent personalization.
+- These changes make the leaderboard page more user-friendly, especially for users browsing on mobile or focusing on specific product categories.
+
 ## [2.1.0] - 2025-04-07
 
 ### Added
