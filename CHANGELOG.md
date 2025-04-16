@@ -2,6 +2,25 @@
 
 All notable changes to SmokeLog will be documented in this file. This project adheres to [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and uses [Semantic Versioning](https://semver.org/).
 
+## [2.5.0] - 2025-04-16
+
+### Added
+- **Link Sessions to Inventory and Show Usage Count:**
+  - Added `itemId` to session logs for direct reference to inventory items.
+  - Updated session submission logic to include `itemId` with each session entry.
+  - Computed and displayed a 💨 usage count under each inventory item, showing how many times it has been used in sessions.
+  - Introduced a `sessionCount` field to inventory items and mapped data from Firestore using `itemId`.
+  - Enhanced styling with `.sessionCount` and `.sortContainer` classes for clearer visual layout.
+  - Improved responsive handling for sort dropdown controls across product categories.
+  - Files: `src/pages/session.tsx`, `src/pages/inventory.tsx`, `src/types/SessionData.ts`, `src/styles/inventory.module.css`.
+  - Issue: [#25](https://github.com/SmokeLog/SmokeLog/issues/25)
+  - Commit: `feat: Link sessions to inventory and display usage count with new styles`
+
+### Notes
+- Version 2.5.0 introduces smarter usage tracking by linking sessions directly to inventory items.
+- Users can now see how often a product has been consumed, providing helpful insights at a glance.
+- Styling enhancements also pave the way for improved filtering and inventory interaction going forward.
+
 ## [2.4.0] - 2025-04-15
 
 ### Changed
