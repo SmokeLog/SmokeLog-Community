@@ -2,6 +2,30 @@
 
 All notable changes to SmokeLog will be documented in this file. This project adheres to [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and uses [Semantic Versioning](https://semver.org/).
 
+## [2.4.0] - 2025-04-15
+
+### Changed
+- **Modularized Global Styles into Page-Specific Modules:**
+  - Split the large `globals.css` into modular CSS files per page (e.g., `dashboard.module.css`, `login.module.css`, etc.).
+  - Updated all pages and components to import only their respective style modules.
+  - Moved `globals.css` into `src/styles` for organizational clarity.
+  - Adjusted `_app.tsx` to use the new modular style structure.
+  - Files: `src/pages/*.tsx`, `src/styles/*.module.css`, `_app.tsx`.
+  - Issue: [#23](https://github.com/SmokeLog/SmokeLog/issues/23)
+  - Commit: `refactor: modularize global styles and update page imports`
+
+- **Centered Leaderboard Title and Removed Hover Cursor:**
+  - Centered the "Top Users by SmokeLog Score" section title on the Leaderboards page.
+  - Removed hover effect and pointer cursor from the non-interactive title area for better UX clarity.
+  - Files: `src/styles/leaderboards.module.css`, `src/pages/leaderboards.tsx`.
+  - Issue: [#24](https://github.com/SmokeLog/SmokeLog/issues/24)
+  - Commit: `style(leaderboards): center leaderboard section title and remove hover effect`
+
+### Notes
+- Version 2.4.0 focuses on foundational style improvements and visual polish.
+- Modularizing CSS paves the way for better maintainability and scoped styling.
+- Leaderboard visual fix ensures cleaner presentation and aligns with recent UI consistency efforts.
+
 ## [2.3.0] - 2025-04-08
 
 ### Added
