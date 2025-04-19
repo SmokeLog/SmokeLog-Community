@@ -2,6 +2,37 @@
 
 All notable changes to SmokeLog will be documented in this file. This project adheres to [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and uses [Semantic Versioning](https://semver.org/).
 
+## [2.6.0] - 2025-04-18
+
+### Added
+- **Sorting Filter Dropdown and Swirl Loader for Inventory Page:**
+  - Implemented a sorting filter dropdown for Concentrates, Flower, and Carts sections, allowing users to sort by name, price, or session count.
+  - Added `filter.svg` asset for the sorting filter icon.
+  - Introduced a swirl loader animation to enhance the loading experience on the Inventory page.
+  - Updated `inventory.module.css` with styles for the swirl loader, sort dropdown, and improved responsiveness.
+  - Made minor layout and style adjustments in `Footer.tsx` and `index.tsx` for visual consistency across the application.
+  - Files: `src/pages/inventory.tsx`, `src/styles/inventory.module.css`, `src/pages/Footer.tsx`, `src/pages/index.tsx`, `src/assets/filter.svg`.
+  - Issue: [#26](https://github.com/SmokeLog/SmokeLog/issues/26)
+  - Commit: `feat: Add sorting filter to Inventory page and improve loading UI`
+
+- **Enhanced Filter Dropdown Behavior and Visibility:**
+  - Added click-outside detection using `useEffect` to automatically close filter dropdowns when users click outside.
+  - Conditionally rendered filter icons only for categories with items to reduce visual clutter.
+  - Managed dropdown visibility state with a `sortDropdowns` object for consistent behavior.
+  - Preserved existing sorting functionality (name, price, session count) and accessibility features (e.g., `aria-controls`, `aria-expanded`).
+  - Updated `renderInventorySubsection` in `inventory.tsx` to handle dynamic UI states.
+  - Added cleanup for event listeners in `useEffect` to prevent memory leaks.
+  - Files: `src/pages/inventory.tsx`, `src/styles/inventory.module.css`.
+  - Issue: [#27](https://github.com/SmokeLog/SmokeLog/issues/27)
+  - Commit: `feat(inventory): enhance filter dropdown behavior and visibility`
+
+### Notes
+- Version 2.6.0 improves the Inventory page's usability with a sorting filter dropdown and a more engaging loading experience via the swirl loader.
+- The enhanced filter dropdown behavior provides intuitive interactions by auto-closing on external clicks and showing filter controls only when relevant.
+- Minor style updates to `Footer.tsx` and `index.tsx` ensure a cohesive UI across the application.
+- These changes build on the inventory enhancements from v2.5.0, further refining the user experience and interaction patterns.
+- See the [SmokeLog-Community Discussions](https://github.com/SmokeLog/SmokeLog-Community/discussions) or [Issues](https://github.com/SmokeLog/SmokeLog-Community/issues) to get involved.
+
 ## [2.5.0] - 2025-04-16
 
 ### Added
