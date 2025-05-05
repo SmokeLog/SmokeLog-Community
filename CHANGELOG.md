@@ -2,6 +2,48 @@
 
 All notable changes to SmokeLog will be documented in this file. This project adheres to [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and uses [Semantic Versioning](https://semver.org/).
 
+## [2.7.0] - 2025-05-03
+
+### Added
+- **Global Font Styling and Theme Consistency Enhancements:**
+  - Added Google Fonts `<link>` for *Noto Sans* in `_document.tsx` to establish consistent, accessible typography across all pages.
+  - Updated `globals.css` to use *Noto Sans* as the default font for `body` and all heading tags.
+  - Set dark background (`#121212`) and white text color (`#fff`) for the `body` to align with the SmokeLog theme.
+  - Files: `src/pages/_document.tsx`, `src/styles/globals.css`.
+  - Issue: [#28](https://github.com/SmokeLog/SmokeLog/issues/28)
+  - Commit: `feat: Apply global font styling and update metadata in Document and global CSS`
+
+- **Redesign Leaderboard Layout with Category Filters and Stat Detail View:**
+  - Introduced category filter buttons ("All", "Concentrates", "Flower", "Carts") for toggling between stat types.
+  - Refactored leaderboard logic to dynamically render top 5 users and relevant stats per category.
+  - Added stat detail view with expandable panels for deeper insights.
+  - Improved hover interactions, animations, and responsive design across all leaderboard sections.
+  - Files: `src/pages/leaderboards.tsx`, `src/styles/leaderboard.module.css`.
+  - Issue: [#29](https://github.com/SmokeLog/SmokeLog/issues/29)
+  - Commit: `feat: Redesign leaderboard layout with category filtering, improved styles, and stat detail view`
+
+- **Add Stat Detail View and Restructure Dashboard Styles:**
+  - Enabled clickable stat cards on the Dashboard to open a detail view panel with title, description, and value.
+  - Added fade-in animation for smooth transition and reorganized CSS for better maintainability.
+  - Refined mobile responsiveness, navigation button styling, and interactive components like lock icons and swirl loader.
+  - Files: `src/pages/dashboard.tsx`, `src/styles/dashboard.module.css`.
+  - Issue: [#30](https://github.com/SmokeLog/SmokeLog/issues/30)
+  - Commit: `feat(dashboard): add stat detail view and restructure styles for clarity`
+
+- **Refactor Leaderboard Layout for Clarity and Responsive Filtering:**
+  - Modularized leaderboard layout with reusable components for stat grids and top 5 users.
+  - Improved `.statCard`, `.statsGrid`, and `.statDetailView` for better spacing and readability.
+  - Unified color themes and hover effects across all leaderboard components.
+  - Removed redundant layout rules and enhanced mobile responsiveness.
+  - Files: `src/pages/leaderboards.tsx`, `src/styles/leaderboard.module.css`.
+  - Issue: [#31](https://github.com/SmokeLog/SmokeLog/issues/31)
+  - Commit: `refactor(leaderboards): redesign layout and styles for clarity, filtering, and responsiveness`
+
+### Notes
+- Version 2.7.0 brings major visual improvements to SmokeLog with consistent typography, theme updates, and an enhanced leaderboard experience.
+- Stat detail views across Dashboard and Leaderboards provide deeper insights while preserving a clean, interactive layout.
+- Layout modularization and CSS restructuring improve long-term maintainability and responsiveness.
+
 ## [2.6.0] - 2025-04-18
 
 ### Added
