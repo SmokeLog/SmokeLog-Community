@@ -2,6 +2,43 @@
 
 All notable changes to SmokeLog will be documented in this file. This project adheres to [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and uses [Semantic Versioning](https://semver.org/).
 
+## [2.8.0] - 2025-05-10
+
+### Added
+- **Implement Email Unsubscribe System and Developer Tools:**
+  - Added `unsubscribeToken` and `unsubscribed` fields to user records for email opt-out functionality.
+  - Created public `/unsubscribe` page with resubscribe toggle and branded design.
+  - Handled invalid or missing tokens gracefully with fallback messaging.
+  - Added `/api/export-subscribers` endpoint for generating CSV of current subscribers.
+  - Added `/devtools/unsubscribe-setup` and `/devtools/export-subscribers` for internal tooling.
+  - Moved all developer utilities into `pages/devtools/` for improved structure.
+  - Files: `src/pages/unsubscribe.tsx`, `src/pages/api/export-subscribers.ts`, `src/pages/devtools/*.tsx`.
+  - Issue: [#32](https://github.com/SmokeLog/SmokeLog/issues/32)
+  - Commit: `feat(unsubscribe): complete email unsubscribe system with dev tools`
+
+- **Modularize and Simplify Leaderboards Page UI:**
+  - Extracted major sections into modular components: `UserStatsView`, `StatDetailView`, `StatsGroup`, and `UserSearch`.
+  - Updated `leaderboards.tsx` to use modular structure with full support for filters and detail views.
+  - Improved responsive grid layout and accessibility across the page.
+  - Updated typings for `LeaderboardUser` to support filters and component communication.
+  - Files: `src/pages/leaderboards.tsx`, `src/components/leaderboard/*.tsx`, `src/styles/leaderboards.module.css`.
+  - Issue: [#33](https://github.com/SmokeLog/SmokeLog/issues/33)
+  - Commit: `refactor: Modularize and simplify Leaderboards page UI`
+
+- **Add Privacy Policy and Terms Pages with Unified Styling and Footer Links:**
+  - Created `/privacy` and `/terms` pages outlining legal policies and usage terms.
+  - Applied consistent layout with centered headers and boxed sections for readability.
+  - Styled each page using modular CSS: `privacy.module.css` and `terms.module.css`.
+  - Added persistent links to both pages in the global footer.
+  - Files: `src/pages/privacy.tsx`, `src/pages/terms.tsx`, `src/components/Footer.tsx`, `src/styles/privacy.module.css`, `src/styles/terms.module.css`.
+  - Issue: [#34](https://github.com/SmokeLog/SmokeLog/issues/34)
+  - Commit: `feat: Add Privacy Policy and Terms pages with unified styling and footer links`
+
+### Notes
+- Version 2.8.0 improves privacy and compliance by providing a public unsubscribe mechanism and dedicated legal documentation.
+- Leaderboard UI has been modularized for better maintainability and prepares the system for future stat-based features.
+- Developer tools for outreach and user management have been consolidated under `/devtools`, improving internal workflows and structure.
+
 ## [2.7.0] - 2025-05-03
 
 ### Added
