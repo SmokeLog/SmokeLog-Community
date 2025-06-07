@@ -2,6 +2,24 @@
 
 All notable changes to SmokeLog will be documented in this file. This project adheres to [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and uses [Semantic Versioning](https://semver.org/).
 
+## [2.9.0] - 2025-06-06
+
+### Added
+- **Discord Verification Page with Persistent Code and Invite Button:**
+  - Created `/discord` page where users can enter their Discord ID and generate a unique verification code.
+  - The 6-digit code is stored in Firestore and reused across sessions to ensure consistency.
+  - Includes form validation and redirects unauthenticated users away from the page.
+  - Added a button to join the SmokeLog Discord server with visual styling and invite instructions.
+  - Updated the global footer with a Discord icon link for persistent visibility.
+  - Files: `src/pages/discord.tsx`, `src/styles/discord.module.css`, `src/components/Footer.tsx`, `src/styles/footer.module.css`.
+  - Issue: [#35](https://github.com/SmokeLog/SmokeLog/issues/35)
+  - Commit: `feat(discord-verification): add Discord verification page with persistent code + invite link`
+
+### Notes
+- Version 2.9.0 adds the foundation for Discord integration and future bot-based verification.
+- The persistent code mechanism improves UX and prepares the system for linking Discord accounts securely.
+- The new footer update increases community discoverability across all pages.
+
 ## [2.8.0] - 2025-05-10
 
 ### Added
