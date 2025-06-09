@@ -2,6 +2,25 @@
 
 All notable changes to SmokeLog will be documented in this file. This project adheres to [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and uses [Semantic Versioning](https://semver.org/).
 
+## [2.10.0] - 2025-06-09
+
+### Added
+- **Stashed Inventory Section with Persistence and Session Filtering:**
+  - Introduced a new "Stashed Inventory" section for temporarily hiding items without marking them as finished.
+  - Added 📦 **Stash** and 📤 **Unstash** buttons to move items in and out of the stash with a single click.
+  - Updated inventory UI to display a separate collapsible section for stashed items, supporting sorting and per-category collapses.
+  - Persisted stashed state in Firestore and remembered collapsed UI state via `localStorage`.
+  - Session page dropdowns now automatically exclude stashed inventory to prevent accidental logging.
+  - Styled new buttons and inventory item actions using `.stashIcon`, `.unstashIcon`, and `.itemActions` in `inventory.module.css`.
+  - Files: `src/pages/inventory.tsx`, `src/pages/session.tsx`, `src/styles/inventory.module.css`.
+  - Issue: [#36](https://github.com/SmokeLog/SmokeLog/issues/36)
+  - Commit: `feat(inventory): add stashed inventory section with support for toggling and persistence`
+
+### Notes
+- This update improves inventory organization by allowing a flexible mid-state between active and finished items.
+- Filtering improvements in the session logger prevent clutter and mistakes when selecting items.
+
+
 ## [2.9.0] - 2025-06-06
 
 ### Added
